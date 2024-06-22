@@ -1,0 +1,168 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-oz-font-smoothing: grayscale;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+.hide {
+  display: none;
+}
+
+body {
+  background: linear-gradient(90.56deg, #190361 0%, #BB00FF 100%);
+  
+  font-size: 1.6rem;
+
+  display: grid;
+  place-items: center;
+
+  height: 100vh;
+}
+
+main {
+  background: white;
+  border-radius: .5rem;
+
+  padding: 4.8rem 6.4rem 6.4rem 6.4rem;
+
+  margin-top: -12rem;
+}
+
+h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.4rem;
+  font-weight: bold;
+  color: #34355B;
+
+  width: 26rem;
+  text-align: center;
+
+  margin-bottom: 1.4rem;
+}
+
+p {
+  font-family: "DM Sans", sans-serif;
+  font-size: 1.5rem;
+  text-align: center;
+
+  margin-bottom: 2rem;
+}
+
+.screen1 img:hover {
+  cursor: pointer;
+  animation: shake 0.2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(5deg);
+  }
+}
+
+.screen2 {
+  width: 30rem;
+}
+
+h2 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  font-size: 2.4rem;
+  color: #34355B;
+
+  text-align: center;
+  margin-bottom: 1.7rem;
+}
+
+.screen2 img {
+  width: 28rem;
+  
+  margin: 4.2rem 0 4.2rem 1rem;
+}
+
+.button {
+  position: relative;
+  
+  margin-bottom: 2.5rem;
+}
+
+.screen2 button {
+  background: #FF9500;
+  color: white;
+  
+  border: none;
+  border-radius: .4rem;
+  
+  font-family: "DM Sans", sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  
+  width: 18rem;
+  height: 5rem;
+  
+  display: grid;
+  place-items: center;
+  
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  
+  transition: background .3s;
+}
+
+.screen2 button:hover {
+  cursor: pointer;
+  
+  background: #cf7900;
+}
+
+.screen2 p {
+  background: #E4EDF1;
+  width: min(30rem, 90%);
+  height: 11rem;
+
+  font-family: "Dancing Script", cursive;
+  font-size: 2.4rem;
+  font-weight: 400;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 1rem;
+  margin: 0 1.7rem 1.7rem 1.7rem;
+
+  animation: scale-up 1.5s ease-in-out, fade-in 1.5s ease-in-out both;
+  animation-delay: 0.2s;
+  transform-origin: 45% 200%;
+}
+
+@keyframes scale-up {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
