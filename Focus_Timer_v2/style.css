@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: clamp(40%, 1% + 2vw, 62.5%);
+
+  --bg-color:hsl(0, 0%, 100%);
+  --tt-color:hsl(240, 6%, 21%);
+  --bg-button:hsl(240, 9%, 89%);
+}
+
+html.light {
+  --bg-color:hsl(0, 0%, 0%);
+  --tt-color:hsl(0, 0%, 100%);
+}
+
+html.light .ph-sun, 
+html:not(.light) .ph-moon {
+  display: none;
+}
+
+.light .ph-moon {
+  color: white;
+}
+
+.sr-only {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  overflow: hidden;
+
+  margin: -1px;
+  padding: 0px;
+  border: 0;
+  appearance: none;
+}
+
+body {
+  background: var(--bg-color);
+
+  font-size: 1.6rem;
+  font-family: "Roboto", sans-serif;
+
+  display: grid;
+  place-content: center;
+  height: 100vh;  
+}
+
+.app {
+  width: min(83rem);
+  height: min(33.5rem);
+  gap: 19rem;
+
+  margin-top: -12rem;
+}
+
+.side1 {
+  padding-top: 7rem;
+}
+
+#toggle-mode {
+  position: absolute;
+  top: 3.2rem;
+  right: 3.2rem;
+
+  font-size: 3.2rem;
+
+  border: none;
+  background: transparent;
+  
+  cursor: pointer;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.timer {
+  font-size: 12.7rem;
+  font-weight: 500;
+  color: var(--tt-color);
+}
+
+.controls {
+  gap: 4rem;
+}
+
+.controls button {
+  font-size: 6.4rem;
+  
+  background-color: transparent;
+  border: none;
+  border-radius: 999rem;
+
+  color: var(--tt-color);
+
+  cursor: pointer;
+}
+
+.controls button:hover {
+  scale: 1.1;
+  color: #0291bd;
+}
+
+.side2 {
+  height: 33.6rem;
+  width: 30.8rem;
+}
+
+.sounds {
+  display: grid; 
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 3.2rem;
+}
+
+.side2 button {
+  width: 13.8rem;
+  height: 15.2rem;
+
+  font-size: 6.4rem;
+
+  background: var(--bg-button);
+
+  border: none;
+  border-radius: 2.4rem;
+
+  cursor: pointer;
+}
+
+/* onclick sounds */
+.ph-tree-evergreen-music .ph-tree-evergreen,
+.ph-cloud-rain-music .ph-cloud-rain,
+.ph-storefront-music .ph-storefront,
+.ph-flame-music .ph-flame {
+  background: #0291bd;
+  color: white;
+}
+
+/* controls */
+.running .ph-play-circle,
+.running .ph-timer,
+.running .ph-plus-circle,
+.running .ph-minus-circle,
+html:not(.running) .ph-stop-circle,
+html:not(.running) .ph-pause-circle {
+  display: none;
+}
+
+.running .controls {
+  justify-content: center;
+}
